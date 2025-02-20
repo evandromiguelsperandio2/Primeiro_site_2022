@@ -153,6 +153,7 @@ footer {
 #pedro-guilhereme:hover {
     filter: drop-shadow(0px 0px 15px #f5f1f1);
     transform: translate(-5px) scale(1.1);
+    width: 200px;
 }
 
 #arrascaeta:hover {
