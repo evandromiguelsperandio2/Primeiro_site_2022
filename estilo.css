@@ -1,0 +1,240 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./IMG/back22.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    color: white;
+}
+
+.logo {
+    background: left / cover url('/media/examples/puppy-header-logo.jpg');
+    display: flex;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    font: bold calc(1em + 2 * (100vw - 300px) / 100) 'Dancing Script', fantasy;
+    color: #ffffff;
+    text-shadow: rgb(0, 0, 0) 3px 2px 0.1rem;
+    margin-top: -10px;
+}
+
+header > h1 {
+    margin-bottom: 0;
+}
+header > time {
+    font: italic 0.7rem sans-serif;
+    color: blanchedalmond;
+    text-decoration: red;
+    font-size: 10px;
+}
+
+.grid-header {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    gap: 10px;
+}
+
+.container {
+    color: white;
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+}
+
+p {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 2px 1px red;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+header {
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: -30px 0;
+    animation-name: animacao;
+    animation-duration: 6s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+.logo-header {
+    width: 100px;
+}
+
+.logo-texto {
+    text-align: center;
+}
+
+.img-container img {
+   width: 50px;
+   -webkit-transition: -webkit-transform .5s ease;
+   transition: transform .5s ease;
+}
+
+.img-container:hover img {
+   -webkit-transform: scale(1.1);
+   transform: scale(1.1);
+}
+
+.slider {
+    overflow: hidden;
+}
+
+.slider > .slider-content {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    transition: all 500ms ease;
+}
+
+.slider > .slider-content > .slider-item {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.slider > input:nth-child(1):checked ~ .slider-content {
+    transform: translateX(0%);
+}
+
+.slider > input:nth-child(2):checked ~ .slider-content {
+    transform: translateX(-100%);
+}
+
+.slider > input:nth-child(3):checked ~ .slider-content {
+    transform: translateX(-200%);
+}
+
+.slider > input:nth-child(4):checked ~ .slider-content {
+    transform: translateX(-300%);
+}
+
+.slider > input:nth-child(5):checked ~ .slider-content {
+    transform: translateX(-400%);
+}
+
+.carrossel {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.466);
+    color: #fff;
+    padding: 1px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.patrocinadores {
+    padding-top: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#pedro-guilhereme:hover {
+    filter: drop-shadow(0px 0px 15px #f5f1f1);
+    transform: translate(-5px) scale(1.1);
+}
+
+#arrascaeta:hover {
+    filter: drop-shadow(0px 0px 15px #f5f1f1);
+    transform: translate(-5px) scale(1.1);
+    width: 300px;
+}
+
+#gabigol:hover {
+    filter: drop-shadow(0px 0px 15px #f5f1f1);
+    transform: translate(-5px) scale(1.1);
+}
+
+.paty2 {
+    margin: 0px -20px;
+}
+
+@keyframes animacao {
+    0% {
+        background-color: rgba(233, 23, 23, 0.5);
+    }
+    50% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    100% {
+        background-color: rgba(238, 38, 38, 0.3);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-header {
+        grid-template-columns: 1fr; /* Coloca os elementos em uma coluna única em telas menores */
+    }
+
+    .logo-header {
+        width: 80px; /* Reduz o tamanho da logo */
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-container img {
+        width: 40px; /* Ajuste do tamanho das imagens */
+    }
+
+    p {
+        font-size: 14px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    footer {
+        font-size: 12px; /* Ajusta o tamanho do texto no rodapé */
+    }
+
+    #pedro-guilhereme,
+    #gabigol,
+    #arrascaeta {
+        width: 100%; /* Faz com que as imagens ocupem toda a largura em telas pequenas */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem; /* Diminui o tamanho da fonte em telas pequenas */
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .slider-content {
+        flex-direction: column;
+    }
+
+    .slider-item {
+        width: 100% !important; /* Garante que o carrossel ocupe 100% da largura */
+    }
+
+    footer {
+        font-size: 10px; /* Ajusta ainda mais o tamanho do texto no rodapé */
+    }
+}
